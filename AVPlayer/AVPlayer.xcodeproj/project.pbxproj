@@ -13,6 +13,12 @@
 		2F9C372520B7FC3900B48DC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9C372420B7FC3900B48DC6 /* Assets.xcassets */; };
 		2F9C372820B7FC3900B48DC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9C372620B7FC3900B48DC6 /* LaunchScreen.storyboard */; };
 		2F9C372B20B7FC3900B48DC6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C372A20B7FC3900B48DC6 /* main.m */; };
+		2F9C373420B7FCB500B48DC6 /* MyVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C373320B7FCB500B48DC6 /* MyVideoPlayer.m */; };
+		2F9C373620B7FCC800B48DC6 /* MyVideoPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F9C373520B7FCC800B48DC6 /* MyVideoPlayer.xib */; };
+		2F9C373C20B7FD7500B48DC6 /* 缩小.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9C373820B7FD7400B48DC6 /* 缩小.png */; };
+		2F9C373D20B7FD7500B48DC6 /* 开始.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9C373920B7FD7400B48DC6 /* 开始.png */; };
+		2F9C373E20B7FD7500B48DC6 /* 放大.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9C373A20B7FD7400B48DC6 /* 放大.png */; };
+		2F9C373F20B7FD7500B48DC6 /* 暂停.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9C373B20B7FD7400B48DC6 /* 暂停.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,13 @@
 		2F9C372720B7FC3900B48DC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F9C372920B7FC3900B48DC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F9C372A20B7FC3900B48DC6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2F9C373220B7FCB500B48DC6 /* MyVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyVideoPlayer.h; sourceTree = "<group>"; };
+		2F9C373320B7FCB500B48DC6 /* MyVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVideoPlayer.m; sourceTree = "<group>"; };
+		2F9C373520B7FCC800B48DC6 /* MyVideoPlayer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyVideoPlayer.xib; sourceTree = "<group>"; };
+		2F9C373820B7FD7400B48DC6 /* 缩小.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "缩小.png"; sourceTree = "<group>"; };
+		2F9C373920B7FD7400B48DC6 /* 开始.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "开始.png"; sourceTree = "<group>"; };
+		2F9C373A20B7FD7400B48DC6 /* 放大.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "放大.png"; sourceTree = "<group>"; };
+		2F9C373B20B7FD7400B48DC6 /* 暂停.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "暂停.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 		2F9C371A20B7FC3900B48DC6 /* AVPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				2F9C373120B7FC8F00B48DC6 /* VideoPlayer */,
 				2F9C371B20B7FC3900B48DC6 /* AppDelegate.h */,
 				2F9C371C20B7FC3900B48DC6 /* AppDelegate.m */,
 				2F9C371E20B7FC3900B48DC6 /* ViewController.h */,
@@ -69,6 +83,28 @@
 				2F9C372A20B7FC3900B48DC6 /* main.m */,
 			);
 			path = AVPlayer;
+			sourceTree = "<group>";
+		};
+		2F9C373120B7FC8F00B48DC6 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				2F9C373720B7FD7400B48DC6 /* img */,
+				2F9C373220B7FCB500B48DC6 /* MyVideoPlayer.h */,
+				2F9C373320B7FCB500B48DC6 /* MyVideoPlayer.m */,
+				2F9C373520B7FCC800B48DC6 /* MyVideoPlayer.xib */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		2F9C373720B7FD7400B48DC6 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				2F9C373820B7FD7400B48DC6 /* 缩小.png */,
+				2F9C373920B7FD7400B48DC6 /* 开始.png */,
+				2F9C373A20B7FD7400B48DC6 /* 放大.png */,
+				2F9C373B20B7FD7400B48DC6 /* 暂停.png */,
+			);
+			path = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +165,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F9C373C20B7FD7500B48DC6 /* 缩小.png in Resources */,
+				2F9C373620B7FCC800B48DC6 /* MyVideoPlayer.xib in Resources */,
+				2F9C373D20B7FD7500B48DC6 /* 开始.png in Resources */,
 				2F9C372820B7FC3900B48DC6 /* LaunchScreen.storyboard in Resources */,
+				2F9C373E20B7FD7500B48DC6 /* 放大.png in Resources */,
 				2F9C372520B7FC3900B48DC6 /* Assets.xcassets in Resources */,
 				2F9C372320B7FC3900B48DC6 /* Main.storyboard in Resources */,
+				2F9C373F20B7FD7500B48DC6 /* 暂停.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F9C373420B7FCB500B48DC6 /* MyVideoPlayer.m in Sources */,
 				2F9C372020B7FC3900B48DC6 /* ViewController.m in Sources */,
 				2F9C372B20B7FC3900B48DC6 /* main.m in Sources */,
 				2F9C371D20B7FC3900B48DC6 /* AppDelegate.m in Sources */,
@@ -281,10 +323,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U4LY4RUXVY;
 				INFOPLIST_FILE = AVPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-1111.AVPlayer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -295,10 +338,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U4LY4RUXVY;
 				INFOPLIST_FILE = AVPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-1111.AVPlayer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

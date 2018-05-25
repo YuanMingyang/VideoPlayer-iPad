@@ -7,16 +7,19 @@
 //
 
 #import "ViewController.h"
+#import "MyVideoPlayer.h"
 
 @interface ViewController ()
-
+@property(nonatomic,strong)MyVideoPlayer *videoPlayer;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.videoPlayer = [MyVideoPlayer createPlayerWithFrame:CGRectMake(256, 192, 512, 384)];
+    self.videoPlayer.videoUrl = [NSURL URLWithString:@"http://gtbl.ecloudmt.com/images/uploads/20171215/o_1c1cnahv9qhr9sm1ep91u9g1p967.mp4"];
+    [self.view addSubview:self.videoPlayer];
 }
 
 
