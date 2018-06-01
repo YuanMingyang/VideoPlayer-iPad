@@ -45,7 +45,7 @@ static MyVideoPlayer *videoPlayer;
     [self.touchView addGestureRecognizer:doubleTap];
     [singleTap requireGestureRecognizerToFail:doubleTap];
     [self createStatusTimer];
-    //[self showActivity];
+    [self showActivity];
 }
 
 
@@ -62,6 +62,13 @@ static MyVideoPlayer *videoPlayer;
 //双击屏幕
 -(void)doubleTap{
     NSLog(@"双击");
+    [self createStatusTimer];
+    if (self.stopOrPlayBtn.selected) {
+        [self.player play];
+    }else{
+        [self.player pause];
+    }
+    self.stopOrPlayBtn.selected = !self.stopOrPlayBtn.selected;
 }
 
 //创建底部状态栏定时器
@@ -154,7 +161,12 @@ static MyVideoPlayer *videoPlayer;
 
 - (IBAction)stopOrPlayBtnClick:(UIButton *)sender {
     [self createStatusTimer];
-
+    if (sender.selected) {
+        [self.player play];
+    }else{
+        [self.player pause];
+    }
+    sender.selected = !sender.selected;
 }
 
 - (IBAction)bigOrSmallBtnClick:(UIButton *)sender {

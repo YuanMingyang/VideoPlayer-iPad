@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.videoPlayer = [MyVideoPlayer createPlayerWithFrame:CGRectMake(256, 192, 512, 384)];
+    self.videoPlayer = [MyVideoPlayer createPlayerWithFrame:CGRectMake(100, 100, 512, 384)];
     self.videoPlayer.videoUrl = [NSURL URLWithString:@"http://gtbl.ecloudmt.com/images/uploads/20171215/o_1c1cnahv9qhr9sm1ep91u9g1p967.mp4"];
     [self.view addSubview:self.videoPlayer];
 }
