@@ -46,6 +46,8 @@ static MyVideoPlayer *videoPlayer;
     [singleTap requireGestureRecognizerToFail:doubleTap];
     [self createStatusTimer];
     [self showActivity];
+    
+    [self.progressSlide setThumbImage:[UIImage imageNamed:@"prPoint"] forState:UIControlStateNormal];
 }
 
 
@@ -116,6 +118,28 @@ static MyVideoPlayer *videoPlayer;
     [self.playerItem addObserver:self forKeyPath:@"playbackLikelyToKeepUp" options:NSKeyValueObservingOptionNew context:nil];//监听缓存足够视频加载出来
     [self.player play];
     
+    __weak typeof(self)weakSelf = self;
+    [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:nil usingBlock:^(CMTime time) {
+        AVPlayerItem *playerItem = weakSelf.playerItem;
+        NSTimeInterval currentTime = playerItem.currentTime.value/playerItem.currentTime.timescale;
+        NSTimeInterval totalTime   = CMTimeGetSeconds(playerItem.duration);
+        weakSelf.timeLabel.text = [NSString stringWithFormat:@"%@/%@",[weakSelf timeToStringWithTimeInterval:currentTime],[weakSelf timeToStringWithTimeInterval:totalTime]];
+        weakSelf.progressSlide.value = currentTime/totalTime;
+        if (currentTime>=totalTime-1) {
+            weakSelf.stopOrPlayBtn.selected = YES;
+        }
+        NSLog(@"%f --- %f",currentTime,totalTime);
+    }];
+    
+}
+
+/** 转换播放时间和总时间的方法 */
+-(NSString *)timeToStringWithTimeInterval:(NSTimeInterval)interval;
+{
+    NSInteger Min = interval / 60;
+    NSInteger Sec = (NSInteger)interval % 60;
+    NSString *intervalString = [NSString stringWithFormat:@"%02ld:%02ld",Min,Sec];
+    return intervalString;
 }
 #pragma mark -- 外部方法
 +(instancetype)createPlayerWithFrame:(CGRect)frame{
@@ -190,5 +214,10 @@ static MyVideoPlayer *videoPlayer;
 
 - (IBAction)progressSlideValueChanged:(UISlider *)sender {
     [self createStatusTimer];
+    NSTimeInterval currentTime = CMTimeGetSeconds(self.playerItem.duration)*sender.value;
+    [self.player seekToTime:CMTimeMakeWithSeconds(currentTime, NSEC_PER_SEC) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero];
+    NSTimeInterval totalTime   = CMTimeGetSeconds(self.playerItem.duration);
+    self.timeLabel.text = [NSString stringWithFormat:@"%@/%@",[self timeToStringWithTimeInterval:currentTime],[self timeToStringWithTimeInterval:totalTime]];
+    [self.player play];
 }
 @end

@@ -49,6 +49,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="103:00/133:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGy-Sc-xdL">
                             <rect key="frame" x="62" y="15.5" width="100.5" height="20"/>
                             <constraints>
+                                <constraint firstAttribute="width" constant="100" id="5IB-l0-F62"/>
                                 <constraint firstAttribute="height" constant="20" id="iyr-Pk-Qku"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -56,7 +57,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nue-WZ-tMN">
-                            <rect key="frame" x="180.5" y="17.5" width="261.5" height="16"/>
+                            <rect key="frame" x="170.5" y="17.5" width="271.5" height="16"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="15" id="cbz-Dz-b3f"/>
                             </constraints>
@@ -73,7 +74,7 @@
                         <constraint firstItem="uiX-H3-rU3" firstAttribute="top" secondItem="fKR-nn-7Kv" secondAttribute="top" constant="9" id="Jse-Tr-W2g"/>
                         <constraint firstAttribute="trailing" secondItem="CH0-PE-5HT" secondAttribute="trailing" constant="20" id="M0G-ge-T7D"/>
                         <constraint firstItem="CH0-PE-5HT" firstAttribute="top" secondItem="fKR-nn-7Kv" secondAttribute="top" constant="9" id="N3Z-wH-BCS"/>
-                        <constraint firstItem="nue-WZ-tMN" firstAttribute="leading" secondItem="TGy-Sc-xdL" secondAttribute="trailing" constant="20" id="RaM-8B-EDf"/>
+                        <constraint firstItem="nue-WZ-tMN" firstAttribute="leading" secondItem="TGy-Sc-xdL" secondAttribute="trailing" constant="10" id="RaM-8B-EDf"/>
                         <constraint firstItem="TGy-Sc-xdL" firstAttribute="centerY" secondItem="fKR-nn-7Kv" secondAttribute="centerY" id="hgq-Lb-5eu"/>
                         <constraint firstItem="CH0-PE-5HT" firstAttribute="leading" secondItem="nue-WZ-tMN" secondAttribute="trailing" constant="20" id="rNl-DC-pjV"/>
                         <constraint firstItem="uiX-H3-rU3" firstAttribute="leading" secondItem="fKR-nn-7Kv" secondAttribute="leading" constant="20" id="vxt-CZ-vLL"/>

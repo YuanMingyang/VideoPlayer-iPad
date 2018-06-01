@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F7A407420C1224F00C4CEA6 /* prPoint@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7A407220C1224F00C4CEA6 /* prPoint@3x.png */; };
+		2F7A407520C1224F00C4CEA6 /* prPoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F7A407320C1224F00C4CEA6 /* prPoint@2x.png */; };
 		2F9C371D20B7FC3900B48DC6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C371C20B7FC3900B48DC6 /* AppDelegate.m */; };
 		2F9C372020B7FC3900B48DC6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9C371F20B7FC3900B48DC6 /* ViewController.m */; };
 		2F9C372320B7FC3900B48DC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9C372120B7FC3900B48DC6 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F7A407220C1224F00C4CEA6 /* prPoint@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prPoint@3x.png"; sourceTree = "<group>"; };
+		2F7A407320C1224F00C4CEA6 /* prPoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prPoint@2x.png"; sourceTree = "<group>"; };
 		2F9C371820B7FC3900B48DC6 /* AVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9C371B20B7FC3900B48DC6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2F9C371C20B7FC3900B48DC6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		2F9C373720B7FD7400B48DC6 /* img */ = {
 			isa = PBXGroup;
 			children = (
+				2F7A407320C1224F00C4CEA6 /* prPoint@2x.png */,
+				2F7A407220C1224F00C4CEA6 /* prPoint@3x.png */,
 				2F9C373820B7FD7400B48DC6 /* 缩小.png */,
 				2F9C373920B7FD7400B48DC6 /* 开始.png */,
 				2F9C373A20B7FD7400B48DC6 /* 放大.png */,
@@ -166,6 +172,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F9C373C20B7FD7500B48DC6 /* 缩小.png in Resources */,
+				2F7A407520C1224F00C4CEA6 /* prPoint@2x.png in Resources */,
+				2F7A407420C1224F00C4CEA6 /* prPoint@3x.png in Resources */,
 				2F9C373620B7FCC800B48DC6 /* MyVideoPlayer.xib in Resources */,
 				2F9C373D20B7FD7500B48DC6 /* 开始.png in Resources */,
 				2F9C372820B7FC3900B48DC6 /* LaunchScreen.storyboard in Resources */,
